@@ -1,6 +1,7 @@
 package server;
 
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,28 +21,52 @@ public class GalgjeServer {
 
     public void start(){
         try {
+            boolean playing = true;
             this.server = new ServerSocket(port);
             this.serverThread = new Thread(()->{
-                while (true) {
+                while (playing) {
                     System.out.println("Waiting for player to connect");
                     try {
-
                         Socket master = this.server.accept();
-                        DataInputStream keyReader = new DataInputStream(master.getInputStream());
-                        String key = keyReader.readUTF();
                         Socket player = this.server.accept();
-                        DataInputStream in = new DataInputStream(player.getInputStream());
-                        System.out.println("Client connected:" + player.getInetAddress().getHostAddress());
-                        while (true){
-                            String guess = in.readUTF();
-                            if(key.contains(guess)){
-                                System.out.println("joe joe");
-                            } else {
-                                System.out.println("nope nope");
+
+                        DataInputStream keyReader = new DataInputStream(master.getInputStream());
+                        DataInputStream userGuess = new DataInputStream(player.getInputStream());
+
+                        String keyWord = keyReader.readUTF();
+                        System.out.println(keyWord);
+                        String winCondition = keyWord;
+
+
+
+                      //  DataOutputStream playerMessages = new DataOutputStream(player.getOutputStream());
+                        int wrongGuesses = 0;
+                        System.out.println("Keyword: " + keyWord);
+                            while (true) {
+                                if(winCondition.length() == 0){
+                                    System.out.println("You won");
+                                    System.out.println("Wrong guesses:" + wrongGuesses);
+                                }
+                                String guess = userGuess.readUTF();
+                                System.out.println("Guess: " + guess);
+                                if(guess.length() > 1){
+                               //    playerMessages.writeUTF("Please enter a single character");
+                                } else {
+                                    if(keyWord.contains(guess)){
+                                        winCondition = winCondition.replaceAll(guess, "");
+                                        System.out.println("right");
+                               //         playerMessages.writeUTF("You guessed right");
+
+                                    } else {
+                             //           playerMessages.writeUTF("You guessed wrong");
+                                        System.out.println("wrong");
+                                        wrongGuesses++;
+                                    }
+                                }
                             }
-                        }
+
                     } catch (IOException e) {
-                        System.out.println("helemaal naar de touwtyfus");
+                        System.out.println("Connection lost");
                     }
                 }
             });
