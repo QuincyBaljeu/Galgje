@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee5804ce-0082-47be-9b75-81fa6b762f74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/Calve_pindakaas-663x747.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/pindakaas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje10.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje11.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje4.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje5.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje6.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje7.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje8.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje9.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje9.png" afterDir="false" />
-    </list>
+    <list default="true" id="ee5804ce-0082-47be-9b75-81fa6b762f74" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,26 +41,34 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="742747639">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Galgje" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Master.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="115">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="414">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -82,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
+            <state relative-caret-position="46">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
@@ -91,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
+            <state relative-caret-position="115">
               <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
             </state>
           </provider>
@@ -100,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/GalgjeMaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="276">
               <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -112,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/GalgjePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="782">
               <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -124,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/GalgjeServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
+            <state relative-caret-position="897">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -160,9 +154,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="945" />
-    <option name="width" value="983" />
-    <option name="height" value="1044" />
+    <option name="x" value="-10" />
+    <option name="width" value="975" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -170,9 +164,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,10 +186,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558955094600" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558958894251" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -281,7 +274,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -289,7 +282,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.5013441" side_tool="true" weight="0.3491656" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49865592" visible="true" weight="0.37740692" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49865592" visible="true" weight="0.38322148" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TMC Test Results" order="0" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -298,7 +291,7 @@
       <window_info anchor="bottom" id="Messages" order="4" weight="0.3293011" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.3266129" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32561505" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3951613" />
       <window_info anchor="bottom" id="Boebot Uploader" order="9" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -321,30 +314,26 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/server/Client.java" />
-    <entry file="file://$PROJECT_DIR$/src/Master.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/res/pindakaas.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
+        <state relative-caret-position="46">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
+        <state relative-caret-position="115">
           <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/GalgjeMaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="276">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -354,7 +343,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/GalgjePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="782">
           <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -364,7 +353,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/GalgjeServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
+        <state relative-caret-position="897">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -372,13 +361,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/pindakaas.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="414">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
