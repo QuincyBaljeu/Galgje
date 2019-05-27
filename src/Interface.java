@@ -31,7 +31,7 @@ public class Interface extends Application {
         ImageView imageView = new ImageView();
 
         imageView.setImage(image);
-        imageView.setFitWidth(100);
+        imageView.setFitWidth(750);
 
 
         Button button = new Button("guess letter");
@@ -49,10 +49,10 @@ public class Interface extends Application {
         guessletterBox.getChildren().addAll(letterToGuess, button);
 
         VBox vBox = new VBox();
-        vBox.getChildren().addAll(guessletterBox, guessedLetters);
+        vBox.getChildren().addAll(imageView, guessletterBox, guessedLetters);
 
         HBox hBox = new HBox();
-        hBox.getChildren().addAll(imageView, vBox);
+        hBox.getChildren().addAll(vBox);
 
         Scene scene = new Scene(hBox);
         stage.setScene(scene);
