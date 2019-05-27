@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee5804ce-0082-47be-9b75-81fa6b762f74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/Calve_pindakaas-663x747.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/pindakaas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje10.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje11.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje4.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje5.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje6.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje7.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje8.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rec/galgje9.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/galgje9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,12 +34,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7" />
+          <entry key="java" value="568" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="568" />
         </counts>
       </usages-collector>
     </session>
@@ -73,8 +61,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="208">
+              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#514#515#0" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1354#1355#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,10 +154,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="945" />
-    <option name="width" value="983" />
-    <option name="height" value="1044" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="width" value="977" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,11 +178,6 @@
             <path>
               <item name="Galgje" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galgje" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Galgje" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galgje" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -197,7 +187,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558955094600" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558959509472" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -289,7 +279,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.5013441" side_tool="true" weight="0.3491656" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49865592" visible="true" weight="0.37740692" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49865592" weight="0.77856225" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TMC Test Results" order="0" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -298,7 +288,7 @@
       <window_info anchor="bottom" id="Messages" order="4" weight="0.3293011" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.3266129" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.3252688" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3951613" />
       <window_info anchor="bottom" id="Boebot Uploader" order="9" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -335,13 +325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/GalgjeMaster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -375,10 +358,24 @@
     <entry file="file://$PROJECT_DIR$/res/pindakaas.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="208">
+          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
