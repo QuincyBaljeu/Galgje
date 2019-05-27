@@ -1,4 +1,3 @@
-import com.sun.javafx.scene.control.skin.CustomColorDialog;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,15 +9,13 @@ import javafx.stage.Stage;
 
 import javafx.scene.image.ImageView;
 
-import javax.xml.soap.Text;
-
 public class Interface extends Application {
 
     public void start(Stage stage){
         stage.setMinWidth(1000);
         stage.setMinHeight(1000);
 
-        Image image = new Image("galgje2.png");
+        Image image = new Image("rec/galgje2.png");
         ImageView imageView = new ImageView(image);
 
         imageView.setFitHeight(500);
