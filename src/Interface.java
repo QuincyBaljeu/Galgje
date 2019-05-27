@@ -18,7 +18,7 @@ public class Interface extends Application {
         stage.setMinWidth(1000);
         stage.setMinHeight(1000);
 
-        Image image = new Image("galgje11.png");
+        Image image = new Image("galgje2.png");
         ImageView imageView = new ImageView(image);
 
         imageView.setFitHeight(500);
@@ -26,14 +26,19 @@ public class Interface extends Application {
 
         Button button = new Button("guess letter");
         TextField letterToGuess = new TextField();
+        TextField guessedLetters = new TextField();
+
 
         HBox guessletterBox = new HBox();
         guessletterBox.getChildren().addAll(letterToGuess, button);
 
+        VBox vBox = new VBox();
+        vBox.getChildren().addAll(guessletterBox, guessedLetters);
+
 
 
         HBox hBox = new HBox();
-        hBox.getChildren().addAll(imageView, guessletterBox);
+        hBox.getChildren().addAll(imageView, vBox);
         Scene scene = new Scene(hBox);
         stage.setScene(scene);
         stage.show();
