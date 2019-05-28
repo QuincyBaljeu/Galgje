@@ -27,7 +27,7 @@ public class Interface extends Application {
 
 
 
-        Image image = new Image("file:C:/Users/qbalj/Documents/Galgje/res/galgje.png");
+        Image image = new Image("file:res/galgje.png");
         ImageView imageView = new ImageView();
 
         imageView.setImage(image);
@@ -37,7 +37,7 @@ public class Interface extends Application {
         Button button = new Button("guess letter");
 
         button.setOnAction( event -> {
-            imageView.setImage(new Image("file:C:/Users/qbalj/Documents/Galgje/res/galgje" + wrongAnswers +".png"));
+            imageView.setImage(new Image("file:res/galgje" + wrongAnswers +".png"));
             wrong();
         });
 

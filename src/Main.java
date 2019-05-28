@@ -7,5 +7,7 @@ public class Main {
         int port = 10000;
         GalgjeServer server = new GalgjeServer(port);
         server.start();
+
+        
     }
 }
