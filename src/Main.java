@@ -12,9 +12,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import server.GalgjeServer;
 
+import javax.xml.soap.Text;
+
 public class Main extends Application {
 
-    public server.GalgjeServer server;
+    private server.GalgjeServer server;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -50,26 +52,30 @@ public class Main extends Application {
         Image image = new Image("file:res/galgje0.png");
         ImageView imageView = new ImageView(image);
 
-        TextField wordToGuess = new TextField();
-        Button setWord = new Button("set word");
+        TextField passwordTextField = new TextField();
+        Button setPassword = new Button("set word");
+        TextField wordProgressTextField = new TextField();
+        wordProgressTextField.setEditable(false);
+        TextField guessedLettersTextField = new TextField();
+        guessedLettersTextField.setEditable(false);
 
-        setWord.setOnAction(event -> {
-            master.enterPassword(wordToGuess.getText());
-            server.wrongGuess();
+        setPassword.setOnAction(event -> {
+            master.enterPassword(passwordTextField.getText());
+
+            if(passwordTextField.getText().length() > 1){
+                passwordTextField.setEditable(false);
+            }
 
             imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
+            guessedLettersTextField.setText(server.getGuessedLetters());
         });
 
-        VBox word = new VBox();
-        word.getChildren().addAll(wordToGuess, setWord);
-
-        TextField guessedLetters = new TextField();
-        guessedLetters.setMinSize(200, 700);
-
         VBox vBox = new VBox();
+        vBox.getChildren().addAll(imageView, passwordTextField, setPassword, wordProgressTextField, guessedLettersTextField);
+
         HBox hBox= new HBox();
-        vBox.getChildren().addAll(imageView, word);
-        hBox.getChildren().addAll(vBox, guessedLetters);
+
+        hBox.getChildren().addAll(vBox);
 
         Scene scene = new Scene(hBox);
         stage.setScene(scene);
@@ -93,20 +99,24 @@ public class Main extends Application {
         imageView.setImage(image);
         imageView.setFitWidth(750);
 
-        TextField letterToGuess = new TextField();
-        TextField guessedLetters = new TextField();
+        TextField letterToGuessTextField = new TextField();
+        TextField guessedLettersTextField = new TextField();
+        guessedLettersTextField.setEditable(false);
+        TextField wordProgressTextField = new TextField();
+        wordProgressTextField.setEditable(false);
 
         Button button = new Button("guess letter");
 
         button.setOnAction( event -> {
-            player.guessLetter(letterToGuess.getText());
+            player.guessLetter(letterToGuessTextField.getText());
+            guessedLettersTextField.setText(server.getGuessedLetters());
         });
 
         HBox guessletterBox = new HBox();
-        guessletterBox.getChildren().addAll(letterToGuess, button);
+        guessletterBox.getChildren().addAll(letterToGuessTextField, button);
 
         VBox vBox = new VBox();
-        vBox.getChildren().addAll(imageView, guessletterBox, guessedLetters);
+        vBox.getChildren().addAll(imageView, guessletterBox, guessedLettersTextField, wordProgressTextField);
 
         HBox hBox = new HBox();
         hBox.getChildren().addAll(vBox);

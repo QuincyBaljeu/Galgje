@@ -1,5 +1,6 @@
 package server;
 
+import java.awt.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -14,14 +15,15 @@ public class GalgjeServer {
     private Thread serverThread;
     private ArrayList<Thread> threads;
     int wrongGuesses;
-    String guessProgress;
-
+    private String guessProgress;
+    private String guessedLetters;
 
     public GalgjeServer(int port) {
         this.port = port;
         this.threads = new ArrayList<>();
         wrongGuesses = 0;
         guessProgress = "";
+        guessedLetters = "";
     }
 
     public void start(){
@@ -39,7 +41,7 @@ public class GalgjeServer {
                         String password = passwordReader.readUTF();
                         System.out.println(password);
                         for (Character c : password.toCharArray()){
-                            guessProgress += "_";
+                            guessProgress += "_ ";
                         }
 
                         /**
@@ -51,6 +53,9 @@ public class GalgjeServer {
 
                         while(true){
                             String guessedLetter = guessReader.readUTF();
+                            System.out.println(guessedLetter);
+                            System.out.println(guessedLetters);
+                            
 
                             if(password.indexOf(guessedLetter) != -1){
                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
@@ -74,6 +79,7 @@ public class GalgjeServer {
         if(wrongGuesses < 13){
             wrongGuesses++;
         }
+        System.out.println(guessProgress);
     }
 
     public int getPort() {
@@ -122,5 +128,13 @@ public class GalgjeServer {
 
     public void setGuessProgress(String guessProgress) {
         this.guessProgress = guessProgress;
+    }
+
+    public String getGuessedLetters() {
+        return guessedLetters;
+    }
+
+    public void setGuessedLetters(String guessedLetters) {
+        this.guessedLetters = guessedLetters;
     }
 }
