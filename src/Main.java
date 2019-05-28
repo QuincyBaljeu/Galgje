@@ -14,14 +14,11 @@ import server.GalgjeServer;
 
 public class Main extends Application {
 
-    int wrongAnswers = 2;
+    public server.GalgjeServer server;
 
-    public void wrong(){
-        wrongAnswers++;
-    }
     @Override
     public void start(Stage stage) throws Exception {
-        server.GalgjeServer server = new GalgjeServer(10000);
+        server = new GalgjeServer(10000);
         server.start();
         Button button = new Button("Master");
         Button button1 = new Button("player");
@@ -50,17 +47,17 @@ public class Main extends Application {
         master.connect();
         Stage stage = new Stage();
 
-        Image image = new Image("file:res/galgje.png");
-        ImageView imageView = new ImageView();
-
-        imageView.setImage(image);
-
+        Image image = new Image("file:res/galgje0.png");
+        ImageView imageView = new ImageView(image);
 
         TextField wordToGuess = new TextField();
         Button setWord = new Button("set word");
 
         setWord.setOnAction(event -> {
             master.enterPassword(wordToGuess.getText());
+            server.wrongGuess();
+
+            imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
         });
 
         VBox word = new VBox();
@@ -78,9 +75,9 @@ public class Main extends Application {
         stage.setScene(scene);
         imageView.setFitWidth(750);
         stage.setTitle("master");
-        stage.initOwner(parent2);
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.showAndWait();
+       // stage.initOwner(parent2);
+       // stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
     }
 
     public void playerBox (Stage parent) {
@@ -90,7 +87,7 @@ public class Main extends Application {
 
         stage.setTitle("player");
 
-        Image image = new Image("file:res/galgje.png");
+        Image image = new Image("file:res/galgje0.png");
         ImageView imageView = new ImageView();
 
         imageView.setImage(image);
@@ -105,8 +102,6 @@ public class Main extends Application {
             player.guessLetter(letterToGuess.getText());
         });
 
-
-
         HBox guessletterBox = new HBox();
         guessletterBox.getChildren().addAll(letterToGuess, button);
 
@@ -118,8 +113,8 @@ public class Main extends Application {
 
         Scene scene = new Scene(hBox);
         stage.setScene(scene);
-        stage.initOwner(parent);
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.showAndWait();
+       // stage.initOwner(parent);
+       // stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
     }
 }

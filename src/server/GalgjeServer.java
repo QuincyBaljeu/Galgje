@@ -13,10 +13,15 @@ public class GalgjeServer {
     private ServerSocket server;
     private Thread serverThread;
     private ArrayList<Thread> threads;
+    int wrongGuesses;
+    String guessProgress;
+
 
     public GalgjeServer(int port) {
         this.port = port;
         this.threads = new ArrayList<>();
+        wrongGuesses = 0;
+        guessProgress = "";
     }
 
     public void start(){
@@ -33,6 +38,9 @@ public class GalgjeServer {
                         DataInputStream passwordReader = new DataInputStream(master.getInputStream());
                         String password = passwordReader.readUTF();
                         System.out.println(password);
+                        for (Character c : password.toCharArray()){
+                            guessProgress += "_";
+                        }
 
                         /**
                          * Connect to player
@@ -42,13 +50,15 @@ public class GalgjeServer {
                         DataInputStream guessReader = new DataInputStream(player.getInputStream());
 
                         while(true){
-                            System.out.println(guessReader.readUTF());
+                            String guessedLetter = guessReader.readUTF();
+
+                            if(password.indexOf(guessedLetter) != -1){
+                                StringBuilder stringBuilder = new StringBuilder(guessProgress);
+                                stringBuilder.setCharAt(password.indexOf(guessedLetter), guessedLetter.charAt(0));
+                            } else {
+                                wrongGuess();
+                            }
                         }
-
-
-
-
-
 
                     } catch (IOException e) {
                         System.out.println("Connection lost");
@@ -58,10 +68,59 @@ public class GalgjeServer {
         } catch (IOException e){
             System.out.println("Could not connect");
         }
-
-
     }
 
+    public void wrongGuess(){
+        if(wrongGuesses < 13){
+            wrongGuesses++;
+        }
+    }
 
+    public int getPort() {
+        return port;
+    }
 
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public ServerSocket getServer() {
+        return server;
+    }
+
+    public void setServer(ServerSocket server) {
+        this.server = server;
+    }
+
+    public Thread getServerThread() {
+        return serverThread;
+    }
+
+    public void setServerThread(Thread serverThread) {
+        this.serverThread = serverThread;
+    }
+
+    public ArrayList<Thread> getThreads() {
+        return threads;
+    }
+
+    public void setThreads(ArrayList<Thread> threads) {
+        this.threads = threads;
+    }
+
+    public int getWrongGuesses() {
+        return wrongGuesses;
+    }
+
+    public void setWrongGuesses(int wrongGuesses) {
+        this.wrongGuesses = wrongGuesses;
+    }
+
+    public String getGuessProgress() {
+        return guessProgress;
+    }
+
+    public void setGuessProgress(String guessProgress) {
+        this.guessProgress = guessProgress;
+    }
 }
