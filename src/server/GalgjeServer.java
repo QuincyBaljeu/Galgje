@@ -55,7 +55,7 @@ public class GalgjeServer {
                             String guessedLetter = guessReader.readUTF();
                             System.out.println(guessedLetter);
                             System.out.println(guessedLetters);
-                            
+
 
                             if(password.indexOf(guessedLetter) != -1){
                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
