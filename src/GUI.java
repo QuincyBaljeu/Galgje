@@ -1,3 +1,5 @@
+import client.GalgjeMaster;
+import client.GalgjePlayer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,6 +10,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import server.GalgjeServer;
 
 public class GUI extends Application {
 
@@ -18,6 +21,8 @@ public class GUI extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception {
+        server.GalgjeServer server = new GalgjeServer(10000);
+        server.start();
         Button button = new Button("Master");
         Button button1 = new Button("player");
 
@@ -41,6 +46,8 @@ public class GUI extends Application {
     }
 
     public  void masterBox(Stage parent2){
+        client.GalgjeMaster master = new GalgjeMaster("localhost", 10000);
+        master.connect();
         Stage stage = new Stage();
 
         Image image = new Image("file:res/galgje.png");
@@ -51,6 +58,10 @@ public class GUI extends Application {
 
         TextField wordToGuess = new TextField();
         Button setWord = new Button("set word");
+
+        setWord.setOnAction(event -> {
+            master.enterPassword(wordToGuess.getText());
+        });
 
         VBox word = new VBox();
         word.getChildren().addAll(wordToGuess, setWord);
@@ -73,6 +84,8 @@ public class GUI extends Application {
     }
 
     public void playerBox (Stage parent) {
+        client.GalgjePlayer player = new GalgjePlayer("localhost", 10000);
+        player.connect();
         Stage stage = new Stage();
 
         stage.setTitle("player");
@@ -83,15 +96,16 @@ public class GUI extends Application {
         imageView.setImage(image);
         imageView.setFitWidth(750);
 
+        TextField letterToGuess = new TextField();
+        TextField guessedLetters = new TextField();
+
         Button button = new Button("guess letter");
 
         button.setOnAction( event -> {
-            imageView.setImage(new Image("file:res/galgje" + wrongAnswers +".png"));
-            wrong();
+            player.guessLetter(letterToGuess.getText());
         });
 
-        TextField letterToGuess = new TextField();
-        TextField guessedLetters = new TextField();
+
 
         HBox guessletterBox = new HBox();
         guessletterBox.getChildren().addAll(letterToGuess, button);

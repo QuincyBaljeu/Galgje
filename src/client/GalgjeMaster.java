@@ -20,17 +20,50 @@ public class GalgjeMaster {
     public void connect(){
         try{
             this.socket = new Socket(this.host, this.port);
-
-            DataOutputStream out = new DataOutputStream(this.socket.getOutputStream());
-            Scanner scanner = new Scanner(System.in);
             System.out.println("Master connected");
-            System.out.println("Enter your keyword");
-            String key = scanner.nextLine();
-            out.writeUTF(key);
-            while (true){
-            }
         } catch (IOException e){
             System.out.println("Could not connect with server");
         }
+    }
+
+    public void enterPassword(String password){
+        try {
+            DataOutputStream out = new DataOutputStream(this.socket.getOutputStream());
+            out.writeUTF(password);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public void setSocket(Socket socket) {
+        this.socket = socket;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
