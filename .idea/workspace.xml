@@ -23,6 +23,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Galgje$GUI.ic" NAME="GUI Coverage Results" MODIFIED="1559044528875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="95" />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1195727535">
       <usages-collector id="statistics.file.extensions.open">
@@ -178,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="width" value="977" />
     <option name="height" value="1040" />
@@ -223,7 +226,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559044654261" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559044760206" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -246,16 +249,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GUI">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
-      <module name="Galgje" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI" />
       <module name="Galgje" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -278,6 +274,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Galgje" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Master" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Master" />
       <module name="Galgje" />
@@ -290,11 +293,11 @@
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Master" />
       <item itemvalue="Application.Interface" />
-      <item itemvalue="Application.GUI" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Interface" />
         <item itemvalue="Application.Master" />
         <item itemvalue="Application.Main" />
