@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GalgjeServer {
 
@@ -16,14 +17,15 @@ public class GalgjeServer {
     private ArrayList<Thread> threads;
     int wrongGuesses;
     private String guessProgress;
-    private String guessedLetters;
+    private ArrayList<String> guessedLetters;
+
 
     public GalgjeServer(int port) {
         this.port = port;
         this.threads = new ArrayList<>();
         wrongGuesses = 0;
         guessProgress = "";
-        guessedLetters = "";
+        guessedLetters = new ArrayList<String>();
     }
 
     public void start(){
@@ -41,7 +43,7 @@ public class GalgjeServer {
                         String password = passwordReader.readUTF();
                         System.out.println(password);
                         for (Character c : password.toCharArray()){
-                            guessProgress += "_ ";
+                            guessProgress += "_";
                         }
 
                         /**
@@ -53,18 +55,33 @@ public class GalgjeServer {
 
                         while(true){
                             String guessedLetter = guessReader.readUTF();
-                            System.out.println(guessedLetter);
-                            System.out.println(guessedLetters);
-
+                            if(!guessedLetters.contains(guessedLetter)){
+                                guessedLetters.add(guessedLetter);
+                            }
 
                             if(password.indexOf(guessedLetter) != -1){
                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
-                                stringBuilder.setCharAt(password.indexOf(guessedLetter), guessedLetter.charAt(0));
-                                System.out.println("goed");
+                                for(char c : password.toCharArray()){
+                                    if(c == guessedLetter.charAt(0) && c == '_'){
+                                        stringBuilder.setCharAt(password.indexOf(c), guessedLetter.charAt(0));
+                                        guessProgress = stringBuilder.toString();
+                                        System.out.println(guessProgress);
+                                    }
+                                }
                             } else {
                                 wrongGuess();
-                                System.out.println("fout");
                             }
+
+//                            if(password.indexOf(guessedLetter) != -1){
+//                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
+//                                stringBuilder.setCharAt(password.indexOf(guessedLetter), guessedLetter.charAt(0));
+//                                System.out.println(stringBuilder);
+//                                System.out.println("goed");
+//                                guessProgress = stringBuilder.toString();
+//                            } else {
+//                                wrongGuess();
+//                                System.out.println("fout");
+//                            }
                         }
 
                     } catch (IOException e) {
@@ -131,11 +148,18 @@ public class GalgjeServer {
         this.guessProgress = guessProgress;
     }
 
-    public String getGuessedLetters() {
-        return guessedLetters;
+    public String getGuessedLettersGui() {
+        String guessedLetterString = "";
+        Collections.sort(guessedLetters);
+
+        for (String character : guessedLetters){
+            guessedLetterString += character + " ";
+        }
+        return guessedLetterString;
     }
 
-    public void setGuessedLetters(String guessedLetters) {
+    public void setGuessedLetters(ArrayList guessedLetters) {
         this.guessedLetters = guessedLetters;
     }
+
 }

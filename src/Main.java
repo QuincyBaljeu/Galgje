@@ -17,7 +17,8 @@ import javax.xml.soap.Text;
 public class Main extends Application {
 
     private server.GalgjeServer server;
-    ImageView imageViewMaster;
+    private ImageView imageViewMaster;
+    private TextField guessedLettersTextFieldMaster;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -57,21 +58,21 @@ public class Main extends Application {
         Button setPassword = new Button("set word");
         TextField wordProgressTextField = new TextField();
         wordProgressTextField.setEditable(false);
-        TextField guessedLettersTextField = new TextField();
-        guessedLettersTextField.setEditable(false);
+        guessedLettersTextFieldMaster = new TextField();
+        guessedLettersTextFieldMaster.setEditable(false); 
 
         setPassword.setOnAction(event -> {
-            master.enterPassword(passwordTextField.getText());
+            if(!passwordTextField.getText().isEmpty()) {
+                master.enterPassword(passwordTextField.getText());
 
-            if(passwordTextField.getText().length() > 1){
-                passwordTextField.setEditable(false);
+                if (passwordTextField.getText().length() > 1) {
+                    passwordTextField.setEditable(false);
+                }
             }
-
-            guessedLettersTextField.setText(server.getGuessedLetters());
         });
 
         VBox vBox = new VBox();
-        vBox.getChildren().addAll(imageViewMaster, passwordTextField, setPassword, wordProgressTextField, guessedLettersTextField);
+        vBox.getChildren().addAll(imageViewMaster, passwordTextField, setPassword, wordProgressTextField, guessedLettersTextFieldMaster);
 
         HBox hBox= new HBox();
 
@@ -108,12 +109,15 @@ public class Main extends Application {
         Button button = new Button("guess letter");
 
         button.setOnAction( event -> {
-            player.guessLetter(letterToGuessTextField.getText());
-            guessedLettersTextField.setText(server.getGuessedLetters());
-            guessedLettersTextField.clear();
+            if(!letterToGuessTextField.getText().isEmpty()) {
+                player.guessLetter(letterToGuessTextField.getText());
+                letterToGuessTextField.clear();
 
-            imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
-            imageViewMaster.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
+                imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
+                imageViewMaster.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
+                guessedLettersTextField.setText(server.getGuessedLettersGui());
+                guessedLettersTextFieldMaster.setText(server.getGuessedLettersGui());
+            }
         });
 
         HBox guessletterBox = new HBox();
