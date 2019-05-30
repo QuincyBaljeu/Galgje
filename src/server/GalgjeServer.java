@@ -60,8 +60,10 @@ public class GalgjeServer {
                             if(password.indexOf(guessedLetter) != -1){
                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
                                 stringBuilder.setCharAt(password.indexOf(guessedLetter), guessedLetter.charAt(0));
+                                System.out.println("goed");
                             } else {
                                 wrongGuess();
+                                System.out.println("fout");
                             }
                         }
 
@@ -79,7 +81,6 @@ public class GalgjeServer {
         if(wrongGuesses < 13){
             wrongGuesses++;
         }
-        System.out.println(guessProgress);
     }
 
     public int getPort() {

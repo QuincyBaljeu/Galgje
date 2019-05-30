@@ -17,6 +17,7 @@ import javax.xml.soap.Text;
 public class Main extends Application {
 
     private server.GalgjeServer server;
+    ImageView imageViewMaster;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -50,7 +51,7 @@ public class Main extends Application {
         Stage stage = new Stage();
 
         Image image = new Image("file:res/galgje0.png");
-        ImageView imageView = new ImageView(image);
+        imageViewMaster = new ImageView(image);
 
         TextField passwordTextField = new TextField();
         Button setPassword = new Button("set word");
@@ -66,12 +67,11 @@ public class Main extends Application {
                 passwordTextField.setEditable(false);
             }
 
-            imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
             guessedLettersTextField.setText(server.getGuessedLetters());
         });
 
         VBox vBox = new VBox();
-        vBox.getChildren().addAll(imageView, passwordTextField, setPassword, wordProgressTextField, guessedLettersTextField);
+        vBox.getChildren().addAll(imageViewMaster, passwordTextField, setPassword, wordProgressTextField, guessedLettersTextField);
 
         HBox hBox= new HBox();
 
@@ -79,7 +79,7 @@ public class Main extends Application {
 
         Scene scene = new Scene(hBox);
         stage.setScene(scene);
-        imageView.setFitWidth(750);
+        imageViewMaster.setFitWidth(750);
         stage.setTitle("master");
        // stage.initOwner(parent2);
        // stage.initModality(Modality.APPLICATION_MODAL);
@@ -110,6 +110,10 @@ public class Main extends Application {
         button.setOnAction( event -> {
             player.guessLetter(letterToGuessTextField.getText());
             guessedLettersTextField.setText(server.getGuessedLetters());
+            guessedLettersTextField.clear();
+
+            imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
+            imageViewMaster.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
         });
 
         HBox guessletterBox = new HBox();
