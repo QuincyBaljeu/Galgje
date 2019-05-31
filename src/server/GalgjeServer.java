@@ -45,6 +45,7 @@ public class GalgjeServer implements Serializable {
                         DataOutputStream dataWriterPlayer = new DataOutputStream(player.getOutputStream());
                         String password = passwordReader.readUTF();
                         System.out.println(password);
+                        String guessedLetterString = "";
                         for (Character c : password.toCharArray()){
                             guessProgress += "_";
                         }
@@ -75,9 +76,13 @@ public class GalgjeServer implements Serializable {
                                 wrongGuess();
                             }
 
+                            for(String s : guessedLetters){
+                                guessedLetterString += s;
+                            }
+
                             String serverGuiData = "file:res/galgje" + this.getWrongGuesses() + ".png" +
-                                    "#" + "yeet" +
-                                    "#" + "yayeet";
+                                    "#" + guessedLetterString +
+                                    "#" + guessProgress;
 
                             dataWriterMaster.writeUTF(serverGuiData);
                             dataWriterPlayer.writeUTF(serverGuiData);

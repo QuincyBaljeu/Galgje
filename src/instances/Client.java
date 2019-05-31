@@ -55,6 +55,8 @@ public class Client extends Application {
 
                 Scanner scanner = new Scanner(player.readServerGuiData()).useDelimiter("#");
                 imageView.setImage(new Image(scanner.next()));
+                guessedLettersTextField.setText(scanner.next());
+                wordProgressTextField.setText(scanner.next());
             }
         });
 
