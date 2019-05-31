@@ -23,6 +23,8 @@ public class Client extends Application {
         player.connect();
         Stage stage = new Stage();
 
+
+
         stage.setTitle("player");
 
         Image image = new Image("file:res/galgje0.png");

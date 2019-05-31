@@ -1,6 +1,8 @@
 package server;
 
-import java.awt.*;
+
+import javafx.scene.image.Image;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -100,6 +102,21 @@ public class GalgjeServer {
         }
     }
 
+    public String getGuessedLettersGui() {
+        String guessedLetterString = "";
+        Collections.sort(guessedLetters);
+
+        for (String character : guessedLetters){
+            guessedLetterString += character + " ";
+        }
+        return guessedLetterString;
+    }
+
+    public Image getProgressImage(){
+
+        return new javafx.scene.image.Image("file:res/galgje" + getWrongGuesses() + ".png");
+    }
+
     public int getPort() {
         return port;
     }
@@ -148,15 +165,7 @@ public class GalgjeServer {
         this.guessProgress = guessProgress;
     }
 
-    public String getGuessedLettersGui() {
-        String guessedLetterString = "";
-        Collections.sort(guessedLetters);
 
-        for (String character : guessedLetters){
-            guessedLetterString += character + " ";
-        }
-        return guessedLetterString;
-    }
 
     public void setGuessedLetters(ArrayList guessedLetters) {
         this.guessedLetters = guessedLetters;
