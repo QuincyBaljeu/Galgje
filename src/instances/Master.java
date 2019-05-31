@@ -11,6 +11,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.DataInputStream;
+import java.io.IOException;
+
 public class Master extends Application {
     private static client.GalgjeMaster master = new GalgjeMaster("localhost", 10000);
 

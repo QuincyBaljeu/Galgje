@@ -1,5 +1,6 @@
 package client;
 
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
@@ -33,6 +34,16 @@ public class GalgjeMaster {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String readServerGuiData(){
+        try {
+            DataInputStream dataReader = new DataInputStream(this.socket.getInputStream());
+            return dataReader.readUTF();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "error";
     }
 
     public Socket getSocket() {

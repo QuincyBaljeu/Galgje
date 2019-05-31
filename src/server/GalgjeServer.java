@@ -3,15 +3,13 @@ package server;
 
 import javafx.scene.image.Image;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class GalgjeServer {
+public class GalgjeServer implements Serializable {
 
     private int port;
     private ServerSocket server;
@@ -41,7 +39,10 @@ public class GalgjeServer {
                          * Connect to master and read the given password
                          */
                         Socket master = this.server.accept();
+                        Socket player = this.server.accept();
                         DataInputStream passwordReader = new DataInputStream(master.getInputStream());
+                        DataOutputStream dataWriterMaster = new DataOutputStream(master.getOutputStream());
+                        DataOutputStream dataWriterPlayer = new DataOutputStream(player.getOutputStream());
                         String password = passwordReader.readUTF();
                         System.out.println(password);
                         for (Character c : password.toCharArray()){
@@ -52,7 +53,7 @@ public class GalgjeServer {
                          * Connect to player
                          */
 
-                        Socket player = this.server.accept();
+
                         DataInputStream guessReader = new DataInputStream(player.getInputStream());
 
                         while(true){
@@ -73,6 +74,13 @@ public class GalgjeServer {
                             } else {
                                 wrongGuess();
                             }
+
+                            String serverGuiData = "file:res/galgje" + this.getWrongGuesses() + ".png" +
+                                    "#" + "yeet" +
+                                    "#" + "yayeet";
+
+                            dataWriterMaster.writeUTF(serverGuiData);
+                            dataWriterPlayer.writeUTF(serverGuiData);
 
 //                            if(password.indexOf(guessedLetter) != -1){
 //                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);

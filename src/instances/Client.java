@@ -11,6 +11,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Client extends Application {
 
     public static void main(String[] args) {
@@ -22,8 +26,6 @@ public class Client extends Application {
         client.GalgjePlayer player = new GalgjePlayer("localhost", 10000);
         player.connect();
         Stage stage = new Stage();
-
-
 
         stage.setTitle("player");
 
@@ -46,11 +48,13 @@ public class Client extends Application {
                 player.guessLetter(letterToGuessTextField.getText());
                 letterToGuessTextField.clear();
 
-                ImageView imageViewMaster = new ImageView();
-                imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
-                imageViewMaster.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
-                guessedLettersTextField.setText(server.getGuessedLettersGui());
-                guessedLettersTextFieldMaster.setText(server.getGuessedLettersGui());
+//                imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
+//                imageViewMaster.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
+//                guessedLettersTextField.setText(server.getGuessedLettersGui());
+//                guessedLettersTextFieldMaster.setText(server.getGuessedLettersGui());
+
+                Scanner scanner = new Scanner(player.readServerGuiData()).useDelimiter("#");
+                imageView.setImage(new Image(scanner.next()));
             }
         });
 

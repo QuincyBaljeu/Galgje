@@ -48,6 +48,18 @@ public class GalgjePlayer{
 
     }
 
+    public String readServerGuiData(){
+        try {
+            DataInputStream dataReader = new DataInputStream(this.socket.getInputStream());
+            return dataReader.readUTF();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "error";
+    }
+
+
+
     public Socket getSocket() {
         return socket;
     }
