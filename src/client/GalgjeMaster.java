@@ -19,8 +19,8 @@ public class GalgjeMaster {
 
     public void connect(){
         try{
-            this.socket = new Socket("192.168.2.1", 7547);
-            System.out.println("Master connected");
+            this.socket = new Socket(host, port);
+            System.out.println("instances.Master connected");
         } catch (IOException e){
             System.out.println("Could not connect with server");
         }

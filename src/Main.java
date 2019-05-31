@@ -24,7 +24,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         server = new GalgjeServer(7547);
         server.start();
-        Button button = new Button("Master");
+        Button button = new Button("instances.Master");
         Button button1 = new Button("player");
 
         HBox hBox = new HBox();
@@ -46,7 +46,7 @@ public class Main extends Application {
         stage.show();
     }
 
-    public  void masterBox(Stage parent2){
+    public void masterBox(Stage parent2){
         client.GalgjeMaster master = new GalgjeMaster("192.168.2.1", 7547);
         master.connect();
         Stage stage = new Stage();

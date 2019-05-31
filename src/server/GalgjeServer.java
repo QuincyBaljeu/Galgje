@@ -15,7 +15,7 @@ public class GalgjeServer {
     private ServerSocket server;
     private Thread serverThread;
     private ArrayList<Thread> threads;
-    int wrongGuesses;
+    private static int wrongGuesses;
     private String guessProgress;
     private ArrayList<String> guessedLetters;
 
@@ -94,7 +94,7 @@ public class GalgjeServer {
         }
     }
 
-    public void wrongGuess(){
+    public static void wrongGuess(){
         if(wrongGuesses < 13){
             wrongGuesses++;
         }
