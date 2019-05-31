@@ -22,7 +22,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        server = new GalgjeServer(10000);
+        server = new GalgjeServer(7547);
         server.start();
         Button button = new Button("Master");
         Button button1 = new Button("player");
@@ -47,7 +47,7 @@ public class Main extends Application {
     }
 
     public  void masterBox(Stage parent2){
-        client.GalgjeMaster master = new GalgjeMaster("localhost", 10000);
+        client.GalgjeMaster master = new GalgjeMaster("192.168.2.1", 7547);
         master.connect();
         Stage stage = new Stage();
 
@@ -88,7 +88,7 @@ public class Main extends Application {
     }
 
     public void playerBox (Stage parent) {
-        client.GalgjePlayer player = new GalgjePlayer("localhost", 10000);
+        client.GalgjePlayer player = new GalgjePlayer("192.168.2.1", 7547);
         player.connect();
         Stage stage = new Stage();
 
