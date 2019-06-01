@@ -96,7 +96,7 @@ public class GalgjeServer implements Serializable {
     }
 
     public static void wrongGuess(){
-        if(wrongGuesses < 13){
+        if(wrongGuesses < 12){
             wrongGuesses++;
         }
     }
