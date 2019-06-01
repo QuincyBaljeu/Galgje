@@ -64,7 +64,7 @@ public class Client extends Application {
         guessletterBox.getChildren().addAll(letterToGuessTextField, button);
 
         VBox vBox = new VBox();
-        vBox.getChildren().addAll(imageView, guessletterBox, guessedLettersTextField, wordProgressTextField);
+        vBox.getChildren().addAll(imageView, guessletterBox, wordProgressTextField, guessedLettersTextField);
 
         HBox hBox = new HBox();
         hBox.getChildren().addAll(vBox);

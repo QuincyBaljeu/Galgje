@@ -2,6 +2,8 @@ package instances;
 
 import client.GalgjeMaster;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -19,7 +21,6 @@ public class Master extends Application {
 
     public static void main(String[] args) {
         launch(Master.class);
-
     }
 
     @Override
@@ -45,6 +46,8 @@ public class Master extends Application {
                 if (passwordTextField.getText().length() > 1) {
                     passwordTextField.setEditable(false);
                 }
+
+                new Thread(longRunningTask).start();
             }
         });
 
@@ -63,5 +66,17 @@ public class Master extends Application {
         // stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
     }
+
+    Task<Void> longRunningTask = new Task<Void>() {
+
+        @Override
+        protected Void call() throws Exception {
+
+            while (true){
+                System.out.println(master.readServerGuiData());
+            }
+        }
+    };
+
 }
 
