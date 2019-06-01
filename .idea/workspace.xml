@@ -21,6 +21,28 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="135" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/instances/Client.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="449">
+                    <caret line="66" column="84" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="Galgje" />
   </component>
@@ -76,18 +98,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/instances/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="66" column="84" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/instances/Server.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,16 +107,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/instances/Master.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state relative-caret-position="187">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#586#587#0" expanded="true" />
                 <element signature="e#622#623#0" expanded="true" />
                 <element signature="e#2245#2406#0" expanded="true" />
+                <element signature="e#2405#2406#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,8 +169,8 @@
         <option value="$PROJECT_DIR$/src/client/GalgjeMaster.java" />
         <option value="$PROJECT_DIR$/src/client/GalgjePlayer.java" />
         <option value="$PROJECT_DIR$/src/server/GalgjeServer.java" />
-        <option value="$PROJECT_DIR$/src/instances/Master.java" />
         <option value="$PROJECT_DIR$/src/instances/Client.java" />
+        <option value="$PROJECT_DIR$/src/instances/Master.java" />
       </list>
     </option>
   </component>
@@ -214,7 +225,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559394305289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559394612100" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -384,16 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/GalgjePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/GalgjeServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -430,25 +431,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/instances/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="66" column="84" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/GalgjePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/instances/Master.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        <state relative-caret-position="187">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#586#587#0" expanded="true" />
             <element signature="e#622#623#0" expanded="true" />
             <element signature="e#2245#2406#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instances/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="66" column="84" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
           </folding>
         </state>
       </provider>

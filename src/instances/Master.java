@@ -15,9 +15,14 @@ import javafx.stage.Stage;
 
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Master extends Application {
-    private static client.GalgjeMaster master = new GalgjeMaster("localhost", 10000);
+    private client.GalgjeMaster master = new GalgjeMaster("localhost", 10000);
+    private ImageView imageViewMaster;
+    private TextField wordProgressTextField;
+    private TextField guessedLettersTextFieldMaster;
+
 
     public static void main(String[] args) {
         launch(Master.class);
@@ -30,13 +35,13 @@ public class Master extends Application {
         Stage stage = new Stage();
 
         Image image = new Image("file:res/galgje0.png");
-        ImageView imageViewMaster = new ImageView(image);
+        imageViewMaster = new ImageView(image);
 
         TextField passwordTextField = new TextField();
         Button setPassword = new Button("set word");
-        TextField wordProgressTextField = new TextField();
+        wordProgressTextField = new TextField();
         wordProgressTextField.setEditable(false);
-        TextField guessedLettersTextFieldMaster = new TextField();
+        guessedLettersTextFieldMaster = new TextField();
         guessedLettersTextFieldMaster.setEditable(false);
 
         setPassword.setOnAction(event -> {
@@ -71,9 +76,14 @@ public class Master extends Application {
 
         @Override
         protected Void call() throws Exception {
-
             while (true){
-                System.out.println(master.readServerGuiData());
+                String serverData = master.readServerGuiData();
+
+                Scanner scanner = new Scanner(serverData);
+                scanner.useDelimiter("#");
+                imageViewMaster.setImage(new Image(scanner.next()));
+                guessedLettersTextFieldMaster.setText(scanner.next());
+                wordProgressTextField.setText(scanner.next());
             }
         }
     };
