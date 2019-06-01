@@ -48,15 +48,11 @@ public class Client extends Application {
                 player.guessLetter(letterToGuessTextField.getText());
                 letterToGuessTextField.clear();
 
-//                imageView.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
-//                imageViewMaster.setImage(new Image("file:res/galgje" + server.getWrongGuesses() + ".png"));
-//                guessedLettersTextField.setText(server.getGuessedLettersGui());
-//                guessedLettersTextFieldMaster.setText(server.getGuessedLettersGui());
-
-                Scanner scanner = new Scanner(player.readServerGuiData()).useDelimiter("#");
-                imageView.setImage(new Image(scanner.next()));
-                guessedLettersTextField.setText(scanner.next());
-                wordProgressTextField.setText(scanner.next());
+                System.out.println(player.readServerGuiData());
+//                Scanner scanner = new Scanner(player.readServerGuiData()).useDelimiter("#");
+//                imageView.setImage(new Image(scanner.next()));
+//                guessedLettersTextField.setText(scanner.next());
+//                wordProgressTextField.setText(scanner.next());
             }
         });
 

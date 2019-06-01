@@ -29,6 +29,7 @@ public class GalgjeServer implements Serializable {
     }
 
     public void start(){
+
         try {
             this.server = new ServerSocket(port);
             this.serverThread = new Thread(()->{
@@ -45,7 +46,6 @@ public class GalgjeServer implements Serializable {
                         DataOutputStream dataWriterPlayer = new DataOutputStream(player.getOutputStream());
                         String password = passwordReader.readUTF();
                         System.out.println(password);
-                        String guessedLetterString = "";
                         for (Character c : password.toCharArray()){
                             guessProgress += "_";
                         }
@@ -53,7 +53,6 @@ public class GalgjeServer implements Serializable {
                         /**
                          * Connect to player
                          */
-
 
                         DataInputStream guessReader = new DataInputStream(player.getInputStream());
 
@@ -76,27 +75,14 @@ public class GalgjeServer implements Serializable {
                                 wrongGuess();
                             }
 
-                            for(String s : guessedLetters){
-                                guessedLetterString += s;
-                            }
 
                             String serverGuiData = "file:res/galgje" + this.getWrongGuesses() + ".png" +
-                                    "#" + guessedLetterString +
+                                    "#" + "yayeet" +
                                     "#" + guessProgress;
 
                             dataWriterMaster.writeUTF(serverGuiData);
                             dataWriterPlayer.writeUTF(serverGuiData);
 
-//                            if(password.indexOf(guessedLetter) != -1){
-//                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
-//                                stringBuilder.setCharAt(password.indexOf(guessedLetter), guessedLetter.charAt(0));
-//                                System.out.println(stringBuilder);
-//                                System.out.println("goed");
-//                                guessProgress = stringBuilder.toString();
-//                            } else {
-//                                wrongGuess();
-//                                System.out.println("fout");
-//                            }
                         }
 
                     } catch (IOException e) {
@@ -120,9 +106,19 @@ public class GalgjeServer implements Serializable {
         Collections.sort(guessedLetters);
 
         for (String character : guessedLetters){
+
             guessedLetterString += character + " ";
+            System.out.println(guessedLetterString);
         }
         return guessedLetterString;
+    }
+
+    public String getArraylistString(ArrayList<String> arrayList){
+        String listString = "";
+        for (String s : arrayList){
+            listString += listString;
+        }
+        return listString;
     }
 
     public Image getProgressImage(){
