@@ -18,6 +18,8 @@ public class GalgjeServer implements Serializable {
     private static int wrongGuesses;
     private String guessProgress;
     private ArrayList<String> guessedLetters;
+    private Boolean playing;
+    private String serverGuiData;
 
 
     public GalgjeServer(int port) {
@@ -26,6 +28,7 @@ public class GalgjeServer implements Serializable {
         wrongGuesses = 0;
         guessProgress = "";
         guessedLetters = new ArrayList<String>();
+        playing = true;
     }
 
     public void start(){
@@ -71,16 +74,21 @@ public class GalgjeServer implements Serializable {
                                      guessProgress = stringBuilder.toString();
                                     }
                                 }
+                                if(guessProgress.equals(password)){
+                                   gameOver();
+                                }
                             } else {
                                 wrongGuess();
-
                             }
-
-
-                            String serverGuiData = "file:res/galgje" + this.getWrongGuesses() + ".png" +
-                                    "#" + getGuessedLettersGui() +
-                                    "#" + guessProgress;
-
+                            if (playing){
+                                serverGuiData = "file:res/galgje" + this.getWrongGuesses() + ".png" +
+                                        "#" + getGuessedLettersGui() +
+                                        "#" + guessProgress;
+                            } else {
+                                serverGuiData = "file:res/galgje12.png" +
+                                        "#" + getGuessedLettersGui() +
+                                        "#" + guessProgress;
+                            }
                             dataWriterMaster.writeUTF(serverGuiData);
                             dataWriterPlayer.writeUTF(serverGuiData);
 
@@ -96,7 +104,11 @@ public class GalgjeServer implements Serializable {
         }
     }
 
-    public static void wrongGuess(){
+    public void gameOver(){
+        playing = false;
+    }
+
+    public void wrongGuess(){
         if(wrongGuesses < 11){
             wrongGuesses++;
         }
@@ -107,9 +119,7 @@ public class GalgjeServer implements Serializable {
         Collections.sort(guessedLetters);
 
         for (String character : guessedLetters){
-
             guessedLetterString += character + " ";
-            System.out.println(guessedLetterString);
         }
         return guessedLetterString;
     }
