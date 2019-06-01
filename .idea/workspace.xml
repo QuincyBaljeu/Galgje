@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ee5804ce-0082-47be-9b75-81fa6b762f74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galgje/server/GalgjeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galgje/server/GalgjeServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GalgjeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GalgjeServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/instances/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="857">
               <caret line="66" column="84" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -41,50 +42,45 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/GalgjeServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+            <state relative-caret-position="200">
+              <caret line="70" column="78" lean-forward="true" selection-start-line="70" selection-start-column="78" selection-end-line="70" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4541#4542#0" expanded="true" />
-                <element signature="e#4568#4569#0" expanded="true" />
-                <element signature="e#4605#4606#0" expanded="true" />
-                <element signature="e#4637#4638#0" expanded="true" />
-                <element signature="e#4676#4677#0" expanded="true" />
-                <element signature="e#4705#4706#0" expanded="true" />
-                <element signature="e#4755#4756#0" expanded="true" />
-                <element signature="e#4791#4792#0" expanded="true" />
-                <element signature="e#4830#4831#0" expanded="true" />
-                <element signature="e#4865#4866#0" expanded="true" />
-                <element signature="e#4921#4922#0" expanded="true" />
-                <element signature="e#4969#4970#0" expanded="true" />
-                <element signature="e#5014#5015#0" expanded="true" />
-                <element signature="e#5044#5045#0" expanded="true" />
-                <element signature="e#5101#5102#0" expanded="true" />
-                <element signature="e#5139#5140#0" expanded="true" />
-                <element signature="e#5175#5176#0" expanded="true" />
-                <element signature="e#5210#5211#0" expanded="true" />
-                <element signature="e#5263#5264#0" expanded="true" />
-                <element signature="e#5311#5312#0" expanded="true" />
-                <element signature="e#5351#5352#0" expanded="true" />
-                <element signature="e#5387#5388#0" expanded="true" />
-                <element signature="e#5445#5446#0" expanded="true" />
-                <element signature="e#5495#5496#0" expanded="true" />
-                <element signature="e#5560#5561#0" expanded="true" />
-                <element signature="e#5612#5613#0" expanded="true" />
+                <element signature="e#4486#4487#0" expanded="true" />
+                <element signature="e#4513#4514#0" expanded="true" />
+                <element signature="e#4550#4551#0" expanded="true" />
+                <element signature="e#4582#4583#0" expanded="true" />
+                <element signature="e#4621#4622#0" expanded="true" />
+                <element signature="e#4650#4651#0" expanded="true" />
+                <element signature="e#4700#4701#0" expanded="true" />
+                <element signature="e#4736#4737#0" expanded="true" />
+                <element signature="e#4775#4776#0" expanded="true" />
+                <element signature="e#4810#4811#0" expanded="true" />
+                <element signature="e#4866#4867#0" expanded="true" />
+                <element signature="e#4914#4915#0" expanded="true" />
+                <element signature="e#4959#4960#0" expanded="true" />
+                <element signature="e#4989#4990#0" expanded="true" />
+                <element signature="e#5046#5047#0" expanded="true" />
+                <element signature="e#5084#5085#0" expanded="true" />
+                <element signature="e#5120#5121#0" expanded="true" />
+                <element signature="e#5155#5156#0" expanded="true" />
+                <element signature="e#5208#5209#0" expanded="true" />
+                <element signature="e#5256#5257#0" expanded="true" />
+                <element signature="e#5296#5297#0" expanded="true" />
+                <element signature="e#5332#5333#0" expanded="true" />
+                <element signature="e#5390#5391#0" expanded="true" />
+                <element signature="e#5440#5441#0" expanded="true" />
+                <element signature="e#5505#5506#0" expanded="true" />
+                <element signature="e#5557#5558#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/galgje12.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/GalgjePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="68">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -96,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/instances/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -105,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/instances/Master.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="391">
               <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -117,7 +113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="544">
               <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
             </state>
           </provider>
@@ -126,7 +122,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/GalgjeMaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
+            <state relative-caret-position="561">
               <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -166,7 +162,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="810" />
+    <option name="y" value="140" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -186,12 +183,13 @@
             <path>
               <item name="Galgje" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galgje" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Galgje" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galgje" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="instances" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Galgje" type="b2602c69:ProjectViewProjectNode" />
@@ -203,12 +201,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559398448793" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559405571013" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -309,13 +307,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.5013441" side_tool="true" weight="0.3491656" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49865592" visible="true" weight="0.32782516" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49865592" visible="true" weight="0.3315565" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TMC Test Results" order="0" weight="0.3292517" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3292517" />
@@ -323,7 +322,7 @@
       <window_info anchor="bottom" id="Messages" order="3" weight="0.32827735" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3293011" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.29577464" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.29577464" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.38894907" />
       <window_info anchor="bottom" id="Boebot Uploader" order="8" weight="0.3292517" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -359,9 +358,12 @@
     <entry file="file://$PROJECT_DIR$/res/galgje10.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/galgje12.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/GalgjePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="68">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -369,9 +371,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/GalgjeMaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
+        <state relative-caret-position="561">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -379,16 +388,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instances/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/instances/Master.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="391">
           <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -398,7 +400,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/instances/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="857">
           <caret line="66" column="84" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -406,48 +408,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/instances/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/galgje12.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/GalgjeServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+        <state relative-caret-position="200">
+          <caret line="70" column="78" lean-forward="true" selection-start-line="70" selection-start-column="78" selection-end-line="70" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4568#4569#0" expanded="true" />
-            <element signature="e#4605#4606#0" expanded="true" />
-            <element signature="e#4637#4638#0" expanded="true" />
-            <element signature="e#4676#4677#0" expanded="true" />
-            <element signature="e#4705#4706#0" expanded="true" />
-            <element signature="e#4755#4756#0" expanded="true" />
-            <element signature="e#4791#4792#0" expanded="true" />
-            <element signature="e#4830#4831#0" expanded="true" />
-            <element signature="e#4865#4866#0" expanded="true" />
-            <element signature="e#4921#4922#0" expanded="true" />
-            <element signature="e#4969#4970#0" expanded="true" />
-            <element signature="e#5014#5015#0" expanded="true" />
-            <element signature="e#5044#5045#0" expanded="true" />
-            <element signature="e#5101#5102#0" expanded="true" />
-            <element signature="e#5139#5140#0" expanded="true" />
-            <element signature="e#5175#5176#0" expanded="true" />
-            <element signature="e#5210#5211#0" expanded="true" />
-            <element signature="e#5263#5264#0" expanded="true" />
-            <element signature="e#5311#5312#0" expanded="true" />
-            <element signature="e#5351#5352#0" expanded="true" />
-            <element signature="e#5387#5388#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
-            <element signature="e#5495#5496#0" expanded="true" />
-            <element signature="e#5560#5561#0" expanded="true" />
-            <element signature="e#5612#5613#0" expanded="true" />
+            <element signature="e#4486#4487#0" expanded="true" />
+            <element signature="e#4513#4514#0" expanded="true" />
+            <element signature="e#4550#4551#0" expanded="true" />
+            <element signature="e#4582#4583#0" expanded="true" />
+            <element signature="e#4621#4622#0" expanded="true" />
+            <element signature="e#4650#4651#0" expanded="true" />
+            <element signature="e#4700#4701#0" expanded="true" />
+            <element signature="e#4736#4737#0" expanded="true" />
+            <element signature="e#4775#4776#0" expanded="true" />
+            <element signature="e#4810#4811#0" expanded="true" />
+            <element signature="e#4866#4867#0" expanded="true" />
+            <element signature="e#4914#4915#0" expanded="true" />
+            <element signature="e#4959#4960#0" expanded="true" />
+            <element signature="e#4989#4990#0" expanded="true" />
+            <element signature="e#5046#5047#0" expanded="true" />
+            <element signature="e#5084#5085#0" expanded="true" />
+            <element signature="e#5120#5121#0" expanded="true" />
+            <element signature="e#5155#5156#0" expanded="true" />
+            <element signature="e#5208#5209#0" expanded="true" />
+            <element signature="e#5256#5257#0" expanded="true" />
+            <element signature="e#5296#5297#0" expanded="true" />
+            <element signature="e#5332#5333#0" expanded="true" />
+            <element signature="e#5390#5391#0" expanded="true" />
+            <element signature="e#5440#5441#0" expanded="true" />
+            <element signature="e#5505#5506#0" expanded="true" />
+            <element signature="e#5557#5558#0" expanded="true" />
           </folding>
         </state>
       </provider>

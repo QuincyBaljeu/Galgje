@@ -65,15 +65,15 @@ public class GalgjeServer implements Serializable {
                             if(password.indexOf(guessedLetter) != -1){
                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
                                 for(char c : password.toCharArray()){
-                                    if(c == guessedLetter.charAt(0) && c == '_'){
-                                        stringBuilder.setCharAt(password.indexOf(c), guessedLetter.charAt(0));
-                                        guessProgress = stringBuilder.toString();
-                                        System.out.println(guessProgress);
+                                 if (c == guessedLetter.charAt(0)){
+                                     System.out.println("yeet");
+                                     stringBuilder.setCharAt(password.indexOf(c), c);
+                                     guessProgress = stringBuilder.toString();
                                     }
                                 }
                             } else {
                                 wrongGuess();
-                                System.out.println(getWrongGuesses());
+
                             }
 
 
