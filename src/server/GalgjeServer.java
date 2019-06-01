@@ -73,6 +73,7 @@ public class GalgjeServer implements Serializable {
                                 }
                             } else {
                                 wrongGuess();
+                                System.out.println(getWrongGuesses());
                             }
 
 
@@ -96,7 +97,7 @@ public class GalgjeServer implements Serializable {
     }
 
     public static void wrongGuess(){
-        if(wrongGuesses < 12){
+        if(wrongGuesses < 11){
             wrongGuesses++;
         }
     }
@@ -122,7 +123,6 @@ public class GalgjeServer implements Serializable {
     }
 
     public Image getProgressImage(){
-
         return new javafx.scene.image.Image("file:res/galgje" + getWrongGuesses() + ".png");
     }
 
