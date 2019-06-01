@@ -77,7 +77,7 @@ public class GalgjeServer implements Serializable {
 
 
                             String serverGuiData = "file:res/galgje" + this.getWrongGuesses() + ".png" +
-                                    "#" + "yayeet" +
+                                    "#" + getGuessedLettersGui() +
                                     "#" + guessProgress;
 
                             dataWriterMaster.writeUTF(serverGuiData);

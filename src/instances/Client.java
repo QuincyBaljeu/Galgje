@@ -48,11 +48,15 @@ public class Client extends Application {
                 player.guessLetter(letterToGuessTextField.getText());
                 letterToGuessTextField.clear();
 
-                System.out.println(player.readServerGuiData());
-//                Scanner scanner = new Scanner(player.readServerGuiData()).useDelimiter("#");
-//                imageView.setImage(new Image(scanner.next()));
-//                guessedLettersTextField.setText(scanner.next());
-//                wordProgressTextField.setText(scanner.next());
+
+                String serverData = player.readServerGuiData();
+                Scanner scanner = new Scanner(serverData);
+                scanner.useDelimiter("#");
+                imageView.setImage(new Image(scanner.next()));
+                guessedLettersTextField.setText(scanner.next());
+                wordProgressTextField.setText(scanner.next());
+
+
             }
         });
 
