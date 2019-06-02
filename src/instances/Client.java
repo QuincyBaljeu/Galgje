@@ -58,7 +58,7 @@ public class Client extends Application {
                     wordProgressTextField.setText(scanner.next());
                  }
             }
-            catch (IllegalArgumentException e){
+            catch (IllegalArgumentException e) {
                 System.out.println("no connection");
             }
         });

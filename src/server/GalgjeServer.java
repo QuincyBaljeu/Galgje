@@ -44,11 +44,11 @@ public class GalgjeServer implements Serializable {
                          */
                         Socket master = this.server.accept();
                         Socket player = this.server.accept();
-                        DataInputStream passwordReader = new DataInputStream(master.getInputStream());
+                        ObjectInputStream passwordReader = new ObjectInputStream(master.getInputStream());
                         DataOutputStream dataWriterMaster = new DataOutputStream(master.getOutputStream());
                         DataOutputStream dataWriterPlayer = new DataOutputStream(player.getOutputStream());
-                        String password = passwordReader.readUTF();
-                        System.out.println(password);
+                        String password = (String)passwordReader.readObject();
+
                         for (Character c : password.toCharArray()){
                             guessProgress += "_";
                         }
@@ -92,17 +92,20 @@ public class GalgjeServer implements Serializable {
                             dataWriterMaster.writeUTF(serverGuiData);
                             dataWriterPlayer.writeUTF(serverGuiData);
                             if(!playing){
-                                master.close();
-                                player.close();
                                 dataWriterMaster.close();
                                 dataWriterPlayer.close();
+                                passwordReader.close();
+                                player.close();
+                                master.close();
                             }
 
                         }
 
                     } catch (IOException e) {
                         System.out.println("Connection lost");
-                }
+                } catch (ClassNotFoundException e) {
+                        System.out.println("Error sending password");
+                    }
             });
             this.serverThread.start();
         } catch (IOException e){

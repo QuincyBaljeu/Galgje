@@ -30,7 +30,6 @@ public class Master extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
         master.connect();
         Stage stage = new Stage();
 

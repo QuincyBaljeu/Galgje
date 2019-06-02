@@ -43,7 +43,7 @@ public class GalgjePlayer{
             DataOutputStream out = new DataOutputStream(this.socket.getOutputStream());
             out.writeUTF(guessedLetter);
         } catch (IOException e){
-            e.printStackTrace();
+            System.out.println("no connection");
         }
 
     }
