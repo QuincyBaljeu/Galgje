@@ -91,6 +91,12 @@ public class GalgjeServer implements Serializable {
                             }
                             dataWriterMaster.writeUTF(serverGuiData);
                             dataWriterPlayer.writeUTF(serverGuiData);
+                            if(!playing){
+                                master.close();
+                                player.close();
+                                dataWriterMaster.close();
+                                dataWriterPlayer.close();
+                            }
 
                         }
 

@@ -44,19 +44,22 @@ public class Client extends Application {
         Button button = new Button("guess letter");
 
         button.setOnAction( event -> {
-            if(!letterToGuessTextField.getText().isEmpty()) {
-                player.guessLetter(letterToGuessTextField.getText());
-                letterToGuessTextField.clear();
+            try {
+                if(!letterToGuessTextField.getText().isEmpty()) {
+                    player.guessLetter(letterToGuessTextField.getText());
+                    letterToGuessTextField.clear();
 
 
-                String serverData = player.readServerGuiData();
-                Scanner scanner = new Scanner(serverData);
-                scanner.useDelimiter("#");
-                imageView.setImage(new Image(scanner.next()));
-                guessedLettersTextField.setText(scanner.next());
-                wordProgressTextField.setText(scanner.next());
-
-
+                    String serverData = player.readServerGuiData();
+                    Scanner scanner = new Scanner(serverData);
+                    scanner.useDelimiter("#");
+                    imageView.setImage(new Image(scanner.next()));
+                    guessedLettersTextField.setText(scanner.next());
+                    wordProgressTextField.setText(scanner.next());
+                 }
+            }
+            catch (IllegalArgumentException e){
+                System.out.println("no connection");
             }
         });
 
