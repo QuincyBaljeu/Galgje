@@ -28,6 +28,10 @@ public class GalgjePlayer{
         this.port = port;
     }
 
+    /**
+     * connects to the server
+     */
+
     public void connect(){
         try{
             this.socket = new Socket(this.host, this.port);
@@ -38,6 +42,11 @@ public class GalgjePlayer{
         }
     }
 
+    /**
+     * sends guessed letter to server
+     * @param guessedLetter
+     */
+
     public void guessLetter(String guessedLetter){
         try {
             DataOutputStream out = new DataOutputStream(this.socket.getOutputStream());
@@ -45,9 +54,13 @@ public class GalgjePlayer{
         } catch (IOException e){
             System.out.println("no connection");
         }
-
     }
 
+
+    /**
+     * reads gui data from server
+     * @return
+     */
     public String readServerGuiData(){
         try {
             DataInputStream dataReader = new DataInputStream(this.socket.getInputStream());

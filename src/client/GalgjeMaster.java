@@ -16,6 +16,10 @@ public class GalgjeMaster implements Serializable {
         this.port = port;
     }
 
+    /**
+     * connects to the server
+     */
+
     public void connect(){
         try{
             this.socket = new Socket(host, port);
@@ -25,6 +29,11 @@ public class GalgjeMaster implements Serializable {
         }
     }
 
+    /**
+     * reads password and sends it to the server
+     * @param password
+     */
+
     public void enterPassword(String password){
         try {
             ObjectOutputStream out = new ObjectOutputStream(this.socket.getOutputStream());
@@ -33,6 +42,11 @@ public class GalgjeMaster implements Serializable {
             e.printStackTrace();
         }
     }
+
+    /**
+     * reads gui data from server
+     * @return
+     */
 
     public String readServerGuiData(){
         try {

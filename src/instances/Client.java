@@ -43,6 +43,10 @@ public class Client extends Application {
 
         Button button = new Button("guess letter");
 
+        /**
+         * guess letter and sends it to server
+         */
+
         button.setOnAction( event -> {
             try {
                 if(!letterToGuessTextField.getText().isEmpty()) {

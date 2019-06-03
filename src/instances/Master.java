@@ -43,6 +43,11 @@ public class Master extends Application {
         guessedLettersTextFieldMaster = new TextField();
         guessedLettersTextFieldMaster.setEditable(false);
 
+
+        /**
+         * sets password en sends it to server
+         */
+
         setPassword.setOnAction(event -> {
             if (!passwordTextField.getText().isEmpty()) {
                 master.enterPassword(passwordTextField.getText());
@@ -70,6 +75,10 @@ public class Master extends Application {
         // stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
     }
+
+    /**
+     * Thread for checking input from server
+     */
 
     Task<Void> longRunningTask = new Task<Void>() {
 

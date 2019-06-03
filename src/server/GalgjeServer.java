@@ -31,6 +31,10 @@ public class GalgjeServer implements Serializable {
         playing = true;
     }
 
+    /**
+     * processes data received from clients and gamedata
+     */
+
     public void start(){
         try {
             this.server = new ServerSocket(port);
@@ -38,9 +42,6 @@ public class GalgjeServer implements Serializable {
                 System.out.println("Waiting for player to connect");
 
                     try {
-                        /**
-                         * Connect to master and read the given password
-                         */
                         Socket master = this.server.accept();
                         Socket player = this.server.accept();
                         ObjectInputStream passwordReader = new ObjectInputStream(master.getInputStream());
