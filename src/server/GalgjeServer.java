@@ -32,7 +32,6 @@ public class GalgjeServer implements Serializable {
     }
 
     public void start(){
-
         try {
             this.server = new ServerSocket(port);
             this.serverThread = new Thread(()->{
@@ -48,14 +47,11 @@ public class GalgjeServer implements Serializable {
                         DataOutputStream dataWriterMaster = new DataOutputStream(master.getOutputStream());
                         DataOutputStream dataWriterPlayer = new DataOutputStream(player.getOutputStream());
                         String password = (String)passwordReader.readObject();
+                        String passwordCheck = password;
 
                         for (Character c : password.toCharArray()){
                             guessProgress += "_";
                         }
-
-                        /**
-                         * Connect to player
-                         */
 
                         DataInputStream guessReader = new DataInputStream(player.getInputStream());
 
@@ -67,14 +63,18 @@ public class GalgjeServer implements Serializable {
 
                             if(password.indexOf(guessedLetter) != -1){
                                 StringBuilder stringBuilder = new StringBuilder(guessProgress);
+                                StringBuilder passwordBuilder = new StringBuilder(password);
                                 for(char c : password.toCharArray()){
                                  if (c == guessedLetter.charAt(0)){
-                                     System.out.println("yeet");
                                      stringBuilder.setCharAt(password.indexOf(c), c);
                                      guessProgress = stringBuilder.toString();
+                                     passwordBuilder.setCharAt(password.indexOf(c), '-');
+                                     password = passwordBuilder.toString();
                                     }
                                 }
-                                if(guessProgress.equals(password)){
+                                System.out.println(passwordCheck);
+                                System.out.println(guessProgress);
+                                if(guessProgress.equals(passwordCheck)){
                                    gameOver();
                                 }
                             } else {
@@ -91,6 +91,9 @@ public class GalgjeServer implements Serializable {
                             }
                             dataWriterMaster.writeUTF(serverGuiData);
                             dataWriterPlayer.writeUTF(serverGuiData);
+
+                            dataWriterMaster.flush();
+                            dataWriterPlayer.flush();
                             if(!playing){
                                 dataWriterMaster.close();
                                 dataWriterPlayer.close();
