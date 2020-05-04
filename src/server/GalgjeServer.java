@@ -73,8 +73,6 @@ public class GalgjeServer implements Serializable {
                                      password = passwordBuilder.toString();
                                     }
                                 }
-                                System.out.println(passwordCheck);
-                                System.out.println(guessProgress);
                                 if(guessProgress.equals(passwordCheck)){
                                    gameOver();
                                 }
